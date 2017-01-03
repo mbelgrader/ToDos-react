@@ -1,4 +1,4 @@
-class Api::TodosControllerController < ApplicationController
+class Api::TodosController < ApplicationController
 
   def show
     render json: Todo.find(params[:id])
@@ -35,6 +35,6 @@ class Api::TodosControllerController < ApplicationController
   private
 
   def todo_params
-    params.require(:todos).permit(:title, :body, :done)
+    params.require(:todo).permit(:title, :body, :done)
   end
 end
