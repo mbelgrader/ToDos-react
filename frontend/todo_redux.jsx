@@ -7,10 +7,11 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 document.addEventListener("DOMContentLoaded", function(){
-  // window.store = store()
+  // window.store = configureStore();
   // window.allTodos = allTodos(store().getState());
   // window.receiveTodo = receiveTodo;
   // window.receiveTodos = receiveTodos;
   const store = configureStore();
+  window.store = store;
   ReactDOM.render(<Root store={store} />, document.getElementById("content"));
 });
